@@ -1,0 +1,40 @@
+1. when implementing a stack using a linked list vs array, which statement is WRONG
+    () an array, insertion and deletion operations take more time
+    as the memory locations are consecutive and fixed. in a linked list case,
+    a new element is stored at the first free and available memory location
+    with only a single overhead step of storing the address of the
+    previous node.
+    () linked list implementation gives you more flexibility over the containers capacity since you can
+    basically always add more items. in an array, you are limited in terms of capacity.
+    () CORRECT options: linked list is a better option in terms of flexible stack capacity w/o requiring
+    memory copy. it is possible to use the front of an array as the "top" of a stack. stack implemented using
+    a linked list has a slightly higher storage overhead comparing to array due to the additional "next  variable
+    in each node.
+    (D) WRONG option: for the push and pop methods, using array is much faster because otherwise a linked list
+    ALWAYS requires traversing to the node at the end.
+2. without an exit condition, a recursive function call will
+    (B) continue executing until the code crashes with StackOverflowException
+3. write pseudocode to implement the fibonacci sequence with recursion. the math definition is:
+    fib(x) = fib(x-1) + fib(x-2)
+
+    Integer fib(Integer n)
+    {
+        if(n <= 1)
+            return n;
+        else
+            return (fib(n-1) + fib(n-2))
+    }
+4. given the code :
+        LinkedListCloset closet = new LinkedListCloset(15);
+
+        closet.put(new Clothes("red hoodie"));
+        closet.put(new Clothes("ice racing logo t-shirt"));
+        closet.put(new Clothes("white jacket"));
+
+        Clothes clothes = closet.retrieve("red hoodie");
+        closet.put(clothes);
+   How many clothes items can this closet object hold?
+   () 15
+   Which clothes are at the LEFT end (front of linked list) of the closet
+   () white jacket
+5. explain why Queue is used in the eCommerceSim. What is the benefit in using queue here?

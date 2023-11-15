@@ -10,6 +10,8 @@ public class LinkedListDemo {
         System.out.println("List has " + list.size() + " nodes.");
 
         list.outputList();
+        if(list.contains("Cantaloupes"))
+            System.out.println("List has cantaloupes");
 
     }
 }

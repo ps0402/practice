@@ -78,5 +78,7 @@ public class LinkedListPractice {
             position = position.getLink(); //TRAVERSING
         }
     }
+    public boolean contains(String item)
+    { return (find(item) != null); }
 
 }
