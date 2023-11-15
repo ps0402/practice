@@ -1,5 +1,3 @@
-import practice.LinkedList;
-
 import java.util.Arrays;
 
 
