@@ -49,6 +49,34 @@ public class LinkedListPractice {
     }
 
     /*
-
+    finding the first node containing target, then returning the reference to said node.
+    if nonexistent, null is returned.
      */
+    public Node1 find(String target)
+    {
+        Node1 position = head;
+        String itemAtPos;
+        while (position != null)
+        {
+            itemAtPos = position.getItem();
+            if(itemAtPos.equals(target))
+                return position;
+            position = position.getLink(); //HOW TO TRAVERSE A LINKED LIST
+        }
+        return null;
+    }
+
+    /*
+    outputing your linkedList
+     */
+    public void outputList()
+    {
+        Node1 position = head;
+        while(position != null)
+        {
+            System.out.println(position.getItem() + " " + position.getCount());
+            position = position.getLink(); //TRAVERSING
+        }
+    }
+
 }
