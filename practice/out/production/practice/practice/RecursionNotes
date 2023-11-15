@@ -1,0 +1,26 @@
+> general form of a recursive method:
+    (1)One or more cases that include one or more recursive calls to the
+    method being defined. these calls should solve smaller versions
+    of the task being performed by the method being defined
+    (2) one or more cases that include NOP recursive calls. these
+    are called base cases or stopping cases. usually, without this,
+    the method will go on infinitely.
+> what is the output of the following program? :
+    public class Exercise1  {
+        public static void main(String[] args)  {
+            cheers(3);
+        }
+        public static void cheers(int n)  {
+            if (n == 1)  {
+                System.out.println("Hurray");
+            }  else  {
+                System.out.println("Hip");
+                cheers(n – 1);
+            }
+        }
+    }
+    () the output will be "Hip Hip Hurray".
+> If your program produces an error message that says stack overflow, what is a  likely source of the error?
+    () a recursive method going infinitely and creating too many "pages"
+>
+>
