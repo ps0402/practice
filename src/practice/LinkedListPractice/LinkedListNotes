@@ -1,0 +1,55 @@
+> what output is produced by the following code?
+    LinkedList1 list = new LinkedList1();
+    list.addToStart("apple pie", 1);
+
+    list.addToStart("hot dogs", 12);
+    list.addToStart("mustard", 1);
+
+    list.outputList();
+
+    () the output would be:
+    mustard 1
+    hot dogs 12
+    apple pie 1
+> define a boolean valued method named isEmpty that can be added to the class LinkedList1. method will
+    return true if the list is empty and false if there is at least one node
+    public boolean isEmpty()
+        {
+            if(head != null)
+                return true;
+            else
+                return false;
+        }
+> define a method named clear with no return value. it will empty the list.
+     public void clear()
+        {
+            while(deleteHeadNode())
+            ;
+        }
+> you can make any class, including our linkedList class, self contained by adding an additional
+inner class. this could mean that WITHIN our linkedList class, we can make our node class there. if it will
+only be used for the outer class, the inner one should be made private in order to hide all objects of
+the inner class and avoid privacy leaks.
+    > this way, you can avoid using accessor and mutator methods.
+> would it make any difference if we changed the node inner class from private to public?
+    () not for our method, but then values could be changed and we risk a privacy leak
+> keeping the inner Node class private, what difference would it make if any of the instance
+variables inside of it had access changed from private to public or package access?
+    () same answer as above. output was as expected
+> why does the definition of the inner Node class not have accessor and mutator methods like
+getLink or setLink, or other get/set methods for the other link fields similar to those in Node1
+definition?
+    () because since the inner class is a part of the main class, all of the field variables are
+    included in both classes.
+> would it be legal to add the following method to the class linkedList2 ?
+    public Node startNode()
+    {
+        return head;
+    }
+    () yes, that method works
+> rewrite the definition of the class LinkedList2 so that is has data of a type named entry which is a
+public inner class. objects of type entry have two instance variables defined as follows:
+    private String item;
+    private int count;
+This rewritten version of linkedList2 will be equal to our first linkedList in that it has the same
+methods doing the same things and it will hold equivalent data in its nodes.

@@ -38,3 +38,18 @@
    Which clothes are at the LEFT end (front of linked list) of the closet
    () white jacket
 5. explain why Queue is used in the eCommerceSim. What is the benefit in using queue here?
+   () queue is used to uncouple the payment, order, and shipping processes. This makes your code much more efficient
+   in the sense that your program will be able to process many more orders. Orders are taken as fast as
+   possible, then added to a queue. In that order, their payment is taken and the order is sent to a second
+   queue. In the same first-in-first-out order, the orders are given to the shipping component. Now your three
+   departments are able to coordinate using queues and execute at their own speeds.
+6. given the following code :
+       private static void verticalNumber(int num, List<Integer> result) {
+           int lastDigit = num % 10;
+           if (num / 10 != 0) {
+               verticalNumber(num / 10, result);
+           }
+           result.add(lastDigit);
+       }
+   what is the content of the "result" list when num is 12345?
+   ()

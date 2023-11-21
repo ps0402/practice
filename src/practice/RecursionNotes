@@ -22,6 +22,3 @@
     () the output will be "Hip Hip Hurray".
 > If your program produces an error message that says stack overflow, what is a  likely source of the error?
     () a recursive method going infinitely and creating too many "pages"
->
->
->

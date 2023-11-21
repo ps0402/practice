@@ -81,4 +81,14 @@ public class LinkedListPractice {
     public boolean contains(String item)
     { return (find(item) != null); }
 
+    public void clear()
+    {while(deleteHeadNode()) ; }
+
+    public boolean isEmpty()
+    {
+        if(head != null)
+            return true;
+        else
+            return false;
+    }
 }
